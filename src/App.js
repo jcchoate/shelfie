@@ -15,17 +15,17 @@ class App extends Component {
 
 
     this.state=
-      [{
+      {
       url:'',
       name:[],
       price:''
-      }]
+      }
     
   }
   
 
   render() {
-    const propstate = this.state
+    const propstate = this.state.name
     // let namesToDisplay = this.state.name.url.price.filter( (element, index) => {
     //   return element.includes( this.state.filterString );
     // }).map( (element, index) => {
