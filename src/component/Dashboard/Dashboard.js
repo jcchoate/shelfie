@@ -1,11 +1,14 @@
-import './Product'
+import React, { Component } from 'react';
+import Product from '../Product/Product'
 
 
-
-class HelloDash extends React.Component {
+class Dashboard extends Component {
     render() {
-        return <div>
+        return (<div>
             <h1>Hello from Dash</h1>
+            <Product/>
         </div>
+        )
     }
 }
+export default Dashboard;

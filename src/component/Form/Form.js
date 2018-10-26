@@ -1,7 +1,10 @@
-class HelloForm extends React.Component {
+import React, { Component } from 'react';
+class Form extends Component {
     render() {
-        return <div>
+        return (<div>
             <h1>Hello from Form</h1>
         </div>
+        )
     }
 }
+export default Form;
