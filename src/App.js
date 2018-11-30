@@ -37,7 +37,7 @@ class App extends Component {
         <Switch>
             <Route exact path='/' component={Dashboard}/>
             <Route exact path='/add' component={Form}/>
-            <Route exact path='/edit/:id' component={Form}/>
+            <Route exact path='/products/edit/:id' component={Form}/>
         </Switch>
     </HashRouter>
         

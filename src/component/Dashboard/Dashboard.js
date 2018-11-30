@@ -19,7 +19,7 @@ class Dashboard extends Component {
     render() {
         return (<div className="dashboard">
             
-            <Product/>
+            <Product />
             
         </div>
         )

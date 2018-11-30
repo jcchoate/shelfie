@@ -45,7 +45,7 @@ class Product extends Component {
                 <img className="picture" src={product.image_url} alt="pants"/>
                 <h3>{product.price}</h3>
                 <button onClick={(id)=> this.deleteFn(id)}>DELETE</button>
-                <Link to={`/products/edit/${this.state.product_id}`}>EDIT</Link>
+                <Link to={`/products/edit/:id`}>EDIT</Link>
                     </div>
                 )
             })

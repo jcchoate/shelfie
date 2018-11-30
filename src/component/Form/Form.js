@@ -25,8 +25,17 @@ class Form extends Component {
         })
         .then((res)=>{this.setState({product:res.data, product_name:'', image_url:'',price:''})})
     }
-    edit(){
-        axios.put(`/products/${this.props.match.params.product_id}`)
+    edit(id){
+        let edited = {
+            image_url: this.state.image_url,
+            product_name: this.state.product_name,
+            price: this.state.price
+        }
+        axios.put(`/products/${id}`,edited).then(res => {
+            this.setState({
+                product: res.data
+            })
+        })
     }
     
     render() {
