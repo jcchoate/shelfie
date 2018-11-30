@@ -1,23 +1,31 @@
-const express = require('express');
+require('dotenv').config()
+const express = require('express')
 const bodyParser = require('body-parser')
 const massive = require('massive')
-require ('dotenv').config()
+const controller = require('./controller')
 
-
-
-const app = express();
+const app = express()
 app.use(bodyParser.json())
+
+
+const port = process.env.PORT
 massive(process.env.CONNECTION_STRING).then(dbInstance => {
     app.set('db', dbInstance)
-}).catch(err=> console.log(err))
+    console.log('You have connected to the database, my lord.')
+    app.listen(port, () => { console.log(port + ' troopers at your command, my lord.') })
+}).catch(err => console.log(err))
+
+
+
+
+app.post('/products', controller.create)
+app.get('/products', controller.getAll)
+app.get('/products/:id', controller.getOne)
+app.put('/products/edit/:id', controller.update)
+app.delete('/products/:id', controller.delete)
 
 
 
 
 
 
-
-const port = process.env.PORT || 3033;
-app.listen(port, ()=> {
-    console.log(`Its over `+ port +`!!!!!`)
-})

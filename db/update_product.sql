@@ -1,0 +1,1 @@
+UPDATE product SET product_name = $2, image_url=$3, price=$4 WHERE post_id = $1

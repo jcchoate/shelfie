@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
 import Product from '../Product/Product'
+import { HashRouter, Switch, Route, Link} from "react-router-dom"
+import axios from 'axios'
+
 
 
 class Dashboard extends Component {
+
+    constructor(){
+        super()
+
+        this.state={
+            products: []
+        }
+    }
+
+    
     render() {
-        return (<div>
-            <h1>Hello from Dash</h1>
-            <h1>{this.props.propstate}</h1>
+        return (<div className="dashboard">
+            
             <Product/>
+            
         </div>
         )
     }

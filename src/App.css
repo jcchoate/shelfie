@@ -30,3 +30,21 @@
     transform: rotate(360deg);
   }
 }
+.header{
+  background: rgb(148, 5, 5);
+  color: whitesmoke
+}
+.dashboard{
+  background: rgb(206, 25, 19);
+  width: 30%;
+  position: relative;
+  left: 35%
+}
+.form{
+  background: green;
+  float: right;
+}
+.picture{
+  max-width: 80%;
+  margin: 10%
+}
